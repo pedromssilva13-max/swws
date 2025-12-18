@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Hambúrguer</title>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        /* Ícone do menu */
+        .hamburger {
+            cursor: pointer;
+            padding: 15px;
+            display: inline-block;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: #333;
+            margin: 5px;
+            transition: 0.3s;
+            overflow: auto;
+        }
+
+        /* Menu de navegação */
+        .nav-links {
+            display: none;
+            flex-direction:inherit;
+            background: #f4f4f4;
+            padding: 10px;
+            float: left;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+        }
+
+        .nav-links a:hover {
+            background: #ddd;
+        }
+
+        /* Quando o menu estiver ativo */
+        .nav-active {
+            display: flex;
+        }
+        </style>
+    </head>
+    <body>
+
+        <!-- Ícone hambúrguer -->
+        <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+        </div>
+
+        <!-- Menu de navegação -->
+        <nav class="nav-links" id="navLinks">
+        <a href="#">Início</a>
+        <a href="#">Sobre</a>
+        <a href="#">Serviços</a>
+        <a href="#">Contato</a>
+        </nav>
+
+        <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-active');
+        });
+        </script>
+        </body>
+    </html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Minha galeria</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Pedro">
+        <meta name="keywords" content="galeria de hobbies, e coisas que eu goste de fazer">
+        <link rel="stylesheet" href="../Arquivo_CSS/Galeria.css">
+    </head>
+    <body>
+        <header>
+            <nav class="menu">
+                <input type="checkbox" id="menuCheckbox">
+
+                <div id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul id="blockMenu">
+                    <li>
+                        <a href="../DesafioHTML/Home.html">
+                        Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../DesafioHTML/Hobbies.html">
+                        Hobbies
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../DesafioHTML/Galeria.html">
+                        Galeria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../DesafioHTML/Contato.html">
+                        Contato
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <div class="cards">
+                    <div class="h-2 principal">
+                        <h1>Minha<b>Galeria</b></h1>
+                        <h2>de fotos</h2>                        
+                        <p>Essas são as imagens referente as meus hobbies e gostos pessoais.</p>
+                    </div>
+                    <div class="imgs w-2">
+                        <img src="../Pasta_imagem/hobbies_galeria/saindo_com_amigos_hobbies.jpg" alt="sair com amigos">
+                    </div>
+                    <div class="imgs">
+                        <img src="../Pasta_imagem/hobbies_galeria/tocando_violão_hobbies.webp" alt="tocar violão">
+                    </div>
+                    <div class="imgs h-2 w-2">
+                        <img src="../Pasta_imagem/hobbies_galeria/imgam_bulldog.png" alt="cachorro bulldog francês">
+                    </div>
+                    <div class="imgs">
+                        <img src="../Pasta_imagem/hobbies_galeria/jogando_hobbies.jpeg" alt="jogar">
+                    </div>
+                    <div class="imgs">
+                        <img src="../Pasta_imagem/hobbies_galeria/passeando_com_cachorro.jpg" alt="passear com cachorro">
+                    </div>
+                    <div class="imgs h-2">
+                        <img src="../Pasta_imagem/hobbies_galeria/imagem_lendo_livro_hobbies.webp" alt="lendo livro">
+                    </div>
+                    <div class="imgs">
+                        <img src="../Pasta_imagem/hobbies_galeria/cubo_magico_hobbies.webp" alt="cubo mágico">
+                    </div>
+                    <div class="imgs w-2">
+                        <img src="../Pasta_imagem/hobbies_galeria/livro_que_eu_leio.png" alt="livro que eu leio">
+                    </div>
+                </div>
+                <div id="modal">
+                    <div class="btnfechar">
+                        <img src="../Pasta_imagem/hobbies_galeria/remover.png" alt="botão fechar">
+                    </div>
+                    <div class="btn prev">
+                        <img src="../Pasta_imagem/hobbies_galeria/seta-esquerda.png" alt="botão de voltar">
+                    </div>
+                    <div class="btn next">
+                        <img src="../Pasta_imagem/hobbies_galeria/seta-direita.png" alt="botão de avançar">
+                    </div>
+
+                    <div class="carousel">
+                        <img id="imgModal" src="" alt="Imagem ampliada da galeria">
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="end">
+                <p>©CopyrightPedroM</p>
+            </div>
+        </footer>
+        <script src="../Arquivo_Javascript/galeria.js"></script>
+    </body>
+</html>

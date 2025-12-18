@@ -1,0 +1,93 @@
+ <!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Pagina teste</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Pedro Miguel">
+        <meta name="keywords" content="testes, e mais testes, alem de muito mais testes.">
+        <style>
+            body{
+                background-color: gray;
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                
+            }
+            .titulo h1, .titulo p{
+                background-color: rgba(0, 0, 0, 0.7);
+                border-bottom: 2px solid whitesmoke;
+                color: white;
+                text-transform: capitalize;
+                width: 200px;
+                text-align: center;
+            }
+            .titulo h1{
+                font-size: clamp(1.8rem, calc(7vw + 1rem), 5rem);
+                width: 350px;
+                margin: auto;
+            }
+            .titulo p{
+                display: inline-block;
+                text-align: center;
+            }
+            main{
+                display: inline-block;
+                text-align: center;
+                background-color: white;
+                border-radius: 1em;
+                margin: auto;
+                max-width: 800px;
+                min-width: 320px;
+                padding: min(5em, 8%);
+            }
+            .card{
+                width: 80%;
+                margin: auto;
+            }
+            .card img{
+                box-sizing: border-box;
+                max-width: 100%;/*A imagem fica com seu tamanho 100%, dentro do card, independendo do tamanho que ele nossa está.*/  
+                height: auto;
+                display: block;
+                border: 2px solid #393939;
+            }
+            main p{
+            font-size: clamp(0.1rem, calc(1.5vw + 0.5rem), 1.4rem );
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            /*var numero = parseInt(prompt("Digite um Número: "));
+            var indice = 1;
+            while(indice <= 10){
+                document.write(numero +' x '+ indice +' = '+ (numero*indice) +'<br>');
+                indice = 1 + indice
+            }document.write("saiu do loop");*/
+
+        </script>
+            <header class="titulo">
+            <h1>título</h1>
+            <p>teste de responsividade</p>
+        </header>
+        <main>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et convallis metus. Vestibulum pretium nibh commodo, ornare velit vel, pulvinar enim. 
+                Pellentesque finibus tellus augue, vel egestas nulla pellentesque nec. Donec aliquet odio et tortor convallis, ut elementum sem tristique. 
+                Praesent vel eros consectetur, convallis mauris at, pretium enim. Aliquam erat volutpat. 
+                Ut tincidunt, justo a vestibulum finibus, ligula elit elementum augue, quis posuere massa dolor eu lorem. Quisque quis mi id purus bibendum luctus ac eu lorem. 
+                Duis ultrices mattis est, a ullamcorper orci mattis nec. Duis faucibus sapien non eros posuere fermentum. 
+                Etiam in hendrerit sem. Sed eleifend lacus tincidunt velit feugiat, in feugiat nisi pellentesque. Donec at nibh imperdiet, gravida quam id, consequat eros. 
+                Sed consequat orci in nibh accumsan, convallis placerat ipsum laoreet.
+            </p>
+            <div class="card">
+                <img src="../Pasta_imagem/pl_fundo2.jpg" alt="fundo responsividade">
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et convallis metus. Vestibulum pretium nibh commodo, ornare velit vel, pulvinar enim. 
+                Pellentesque finibus tellus augue, vel egestas nulla pellentesque nec. Donec aliquet odio et tortor convallis, ut elementum sem tristique. Praesent vel eros consectetur, convallis mauris at, pretium enim. 
+                Aliquam erat volutpat. Ut tincidunt, justo a vestibulum finibus, ligula elit elementum augue, quis posuere massa dolor eu lorem. 
+                Quisque quis mi id purus bibendum luctus ac eu lorem. Duis ultrices mattis est, a ullamcorper orci mattis nec. Duis faucibus sapien non eros posuere fermentum. 
+                Etiam in hendrerit sem. Sed eleifend lacus tincidunt velit feugiat, in feugiat nisi pellentesque. Donec at nibh imperdiet, gravida quam id, consequat eros. 
+                Sed consequat orci in nibh accumsan, convallis placerat ipsum laoreet.
+            </p> 
+        </main>
+    </body>
+</html>

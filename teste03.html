@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Contato Saiba mais</title>
+        <meta charset="utf-8">
+        <meta nome="author" content="Pedro Miguel">
+        <meta nome="keywords" content="Contato profissional, telefone, e-mail, e saiba mais">
+        <link rel="stylesheet" href="#">
+        <style>
+body
+{
+  margin: 0;
+  padding: 0;
+  
+  background: #232323;
+  color: #cdcdcd;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+main {
+  width: calc(100% - 240px);
+  max-width: 680px;
+  margin: 100px auto;
+}
+
+p {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+* {
+  /*serve pra suavizar da rolagem do site*/
+  scroll-behavior:initial;
+}
+
+#menuToggle
+{
+  /*O display block serve juscamente para que as estilisações apareçam, e o position: fixed, para que mesmo com o scoou do mouse ele continue na tela*/
+  display: block;
+  position: fixed;
+
+  top: 50px;
+  left: 50px;
+
+  /*Isso é para indicar uma sobreposiçõa*/
+  z-index: 1;
+
+  /*É para ajustar a suavizão da fontes de aconto com os tipos de navegadores WebKit/Blink*/
+  -webkit-user-select: none;
+
+  /*é uma propriedade que indica se o usuario pode selecionar o texto de um elemento*/
+  user-select: none;
+}
+
+#menuToggle a
+{
+  /*tira a aparencia eu link no texto*/
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+
+/*O input é o um "checkbox*/
+#menuToggle input
+{
+  /*indica novamente que o input é um block*/
+  display: block;
+
+  width: 40px;
+  height: 32px;
+  /*O absolute faz com que o input saia do fluxo normal dele*/
+  position: absolute;
+  top: -7px;
+  left: -7px;
+  
+  cursor: pointer;
+  
+  opacity: 0;
+  z-index: 2;
+  
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  /*Ele indica o ponto de "cental" do elemento*/
+  transform-origin: 4px 0px;
+
+  /*O transition é a animação do icone hambugue pra o xizinho*/
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+
+/*first-child seleciona o primeiro elemento do iten pai
+exemplo: 
+<span>primeiro
+<span>segundo
+<span>terceiro
+*/
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  position: absolute;
+  max-width: 400px;
+  width: 100vw;
+  max-height: 100vh;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menu li label
+{
+  cursor: pointer;
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+        </style>
+    </head>
+    <body>
+<nav role="navigation">
+  <div id="menuToggle">
+    <input type="checkbox" id="menuCheckbox" />
+    
+    <span></span>
+    <span></span>
+    <span></span>
+    
+    <ul id="menu">
+      
+      <li>
+        <a href="../DesafioHTML/teste03.html">
+          <label for="menuCheckbox" onclick="this.parentNode.click();"></label>Home</label>
+        </a>
+      </li>
+      <li>
+        <a href="#about">
+          <label for="menuCheckbox" onclick="this.parentNode.click();">About</label>
+        </a>
+      </li>
+      
+      <li><label for="menuCheckbox"><a>Info</a></label></li>
+      <li><label for="menuCheckbox"><a>Contact</a></label></li>
+      
+      <li>
+        <a href="https://erikterwan.com/" target="_blank">Show me more</a>
+      </li>
+    </ul>
+  </div>
+        <main>
+                        
+        </main>
+    </body>
+</html>

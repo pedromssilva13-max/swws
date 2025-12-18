@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: system-ui, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #e0f0ff;
+    transition: 0.5s;
+}
+.hero{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #243757;
+    transition: 0.5s;
+}
+
+.hero p{
+    color: #858585;
+}
+.menu{
+    position: fixed;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover{
+    color: #BFA181;
+}
+
+.menu #menuCheckbox {
+    position: absolute;
+    z-index: 1000;
+    width: 35px;
+    height: 25px;
+    opacity: 0;
+    margin-top: 50px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.menu #menuToggle {
+    position: absolute;
+    z-index: 999;
+    /*cada linha vai ter 5px e cada uma tem dois padding com 5px, totalizando 15px em cada linha*/
+    width: 35px;
+    height: 35px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.menu #menuToggle span{
+    display: block;
+    width: 35px;
+    height: 5px;
+    margin-bottom: 5px;
+    background-color: #333;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+}
+
+.menu #menuCheckbox:checked ~ #menuToggle span{
+    background-color: #ccc;
+}
+.menu #menuCheckbox:checked ~ #menuToggle span:first-child{
+    transform: rotate(45deg) translate(7px, 7px);
+}
+.menu #menuCheckbox:checked ~ #menuToggle span:nth-child(2){
+    opacity: 0;
+}
+
+.menu #menuCheckbox:checked ~ #menuToggle span:nth-child(3){
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.menu ul{
+    position: absolute;
+    z-index: 998;
+    left: 0;
+    top: 0;
+    width: 400px;
+    height: 50vh;
+    margin-left: -400px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 50px;
+    padding-top: 150px;
+
+    box-sizing: border-box;
+    overflow-y: auto;
+    list-style-type: none;
+    transform-origin: 0% 0%;
+    transform: translate( 0% 100%);
+    background-color: #0A1828;
+    transition: all 0.4s ease;
+}
+
+.menu ul li{
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+menu ul li a{
+    color: #ccc;
+    text-decoration: none;
+}
+
+.menu #menuCheckbox:checked ~ ul{
+    margin-left: 0;
+    transition: all 0.4s ease;
+}
+
+.logo{
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    cursor: default;
+}
+.title_m{
+    margin-top: 30px;
+    text-align: center;
+    color: rgb(39, 36, 36);
+}
+.title_m h1{
+    display: inline-block;
+    font-size: xx-large;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: clamp(0.6rem calc(2.5vw + 1.5rem) 2.5rem);
+    border-bottom: 2px solid darkred;
+    overflow: auto;
+}
+main{
+    margin-top: 30px;
+}
+.cards{
+    text-align: center;
+    margin-top: auto;
+}
+.img_A{
+    background-color: rgb(255, 255, 255);
+    width: 390px;
+    border-radius: 0.5em;
+    display: inline-block;
+    text-align: center;
+    margin: 10px 20px;
+}
+.img_A img{
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+}
+.img_A p{
+    font-size: 20px;
+    padding: 0 10px 10px 10px;
+    text-align: justify;
+}
+ footer{
+    margin-top: 20px;
+    margin: 10px;
+    height: 100px;
+ }
+.end{
+    text-align: center;
+    max-width: 150px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+.trilho.dark{
+    background-color: rgb(129, 129, 129);
+}
+.trilho.dark .indicador{
+    background-color: rgb(61, 61, 61);
+    left: 40px;
+}
+body.dark{
+    background-color: #232323;
+}
+body.dark a:hover{
+    background-color: rgba(0, 0, 0, 0.18);
+}
+body.dark .hero{
+    background-color: oklch(48.326% 0.08609 182.997);
+}
+body.dark .bloc{
+    background-color: #bdbdbd;
+}
+body.dark .card p, body.dark .subtitle{
+    color: rgb(53, 53, 53);
+}
+body.dark .end p{
+    background-color: rgba(255, 255, 255, 0.6);
+    color: black;
+}
+body.dark .title_m h1{
+    color: #dadada;
+}

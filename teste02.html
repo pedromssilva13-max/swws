@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--incrivelmente não achei nada de errado nesse codigo, porém ainda assim tenho minhas dúvidas-->
+<html lang="pt-br">
+    <head>
+        <title>Teste de página(html e css)</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Pedro Miguel">
+        <meta name="keywords" content="teste de html, css e divs">
+        <link rel="stylesheet" href="../Arquivo_CSS/teste02.css">
+        <style>
+            .trilho{
+                width: 100px;
+                height: 50px;
+                background-color: #d4d4d4;
+                border-radius: 50px;
+                cursor: pointer;
+                position: relative;
+                transition: 0.5s;
+            }
+            .trilho .indicador{
+                width: 50px;
+                height: 50px;
+                background-color: #707070;
+                border-radius: 50px;
+                transform: scale(.9);
+                position: absolute;
+                transition: 0.5s;
+                left: 0;
+            }
+            .trilho.dark{
+                background-color: #555555;  
+            }
+
+            .trilho.dark .indicador{
+                background-color: black;
+                left: 50px;
+            }
+
+        </style>
+    </head>
+    <body>
+       <div class="principal">
+            <header class="hero">
+                <nav>
+                    <div class="trilho" id="trilho"> 
+                        <div class="indicador"></div>
+                    </div>
+                    <ul>
+                        <li><a href="teste02.html">Inicio</a></li>
+                        <li><a href="#">Quem sou eu?</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </nav>
+                <div class="titulo">
+                    <h1>Curso de website</h1>
+                    <p>Aprender css, html e javascript</p>
+                </div>
+            </header>
+        </div>
+        <main>
+            <section class="Sec_pri">
+                <div class="img_card">
+                    <img height="285px" src="../Pasta_imagem/css3.svg" alt="Logo do CSS" id="CSS3">
+                    <p>CSS</p>
+                </div>
+                <div class="img_card">
+                    <img height="285px" src="../Pasta_imagem/hmtl5.PNG" alt="Logo de HTML" id="HTML2">
+                    <p>HTML</p>
+                </div>
+                <div class="img_card">
+                    <img height="285px" src="../Pasta_imagem/javascript5.png" alt="Logo de Javascript" id="JS5">
+                    <p>JAVASCRIPT</p>
+                </div>
+            </section>
+            <br>
+            <section class="Sec_pri" id="Sec_seg">
+                <header><h2>Titulo</h2></header>
+                <p>Primeiro paragráfo exemplo</p>
+                <p>Segundo paragráfo exemplo</p>
+            </section>
+        </main>
+        <footer>
+                <p>©EuNãoSeiprogramar</p>
+        </footer>
+        <script src='../Arquivo_Javascript/teste02.js'></script>
+    </body>
+</html>

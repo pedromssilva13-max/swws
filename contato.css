@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+    font-family: system-ui, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root{
+    --color-principal: #ffffff;
+    --color-secundario: #e0f0ff;
+    --color-terciario: #243757;
+    --color-quartenario: #0A1828;
+    --color-quintenario: #ccc;
+    --color-senquenario: #777;
+    
+    --color-menu: #333;
+    --color-hover-menu: #BFA181;   
+}
+
+:root dack-mode{
+    --color-principal: #121212;
+    --color-secundario: #1E1E1E;
+    --color-terciario: #333333;
+    --color-quartenario: #777;
+    --color-quintenario: #ccc;
+
+    --color-menu: #ccc;
+    --color-hover-menu: #BFA181;
+}
+body{
+    background-color: var(--color-secundario);
+}
+
+.menu{
+    position: fixed;
+}
+
+.menu a{
+    text-decoration: none;
+    color: var(--color-quintenario);
+    transition: color 0.3s ease;
+}
+
+.menu a:hover{
+    color: var(--color-hover-menu);
+}
+
+.menu #menuCheckbox {
+    position: absolute;
+    z-index: 1000;
+    width: 35px;
+    height: 25px;
+    opacity: 0;
+    margin-top: 50px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.menu #menuToggle {
+    position: absolute;
+    z-index: 999;
+    /*cada linha vai ter 5px e cada uma tem dois padding com 5px, totalizando 15px em cada linha*/
+    width: 35px;
+    height: 35px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.menu #menuToggle span{
+    display: block;
+    width: 35px;
+    height: 5px;
+    margin-bottom: 5px;
+    background-color: var(--color-menu);
+    border-radius: 5px;
+    transition: all 0.4s ease;
+}
+
+.menu #menuCheckbox:checked ~ #menuToggle span{
+    background-color: var(--color-senquenario);
+}
+.menu #menuCheckbox:checked ~ #menuToggle span:first-child{
+    transform: rotate(45deg) translate(7px, 7px);
+}
+.menu #menuCheckbox:checked ~ #menuToggle span:nth-child(2){
+    opacity: 0;
+}
+
+.menu #menuCheckbox:checked ~ #menuToggle span:nth-child(3){
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.menu ul{
+    position: absolute;
+    z-index: 998;
+    left: 0;
+    top: 0;
+    width: 400px;
+    height: 50vh;
+    margin-left: -400px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 50px;
+    padding-top: 150px;
+
+    box-sizing: border-box;
+    overflow-y: auto;
+    list-style-type: none;
+    transform-origin: 0% 0%;
+    transform: translate( 0% 100%);
+    background-color: var(--color-quartenario);
+    transition: all 0.4s ease;
+}
+
+.menu ul li{
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.menu ul li a{
+    color: var(--color-principal);
+    text-decoration: none;
+}
+
+.menu #Buttondack{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    background-color: var(--color-quintenario);
+}
+
+.menu #menuCheckbox:checked ~ ul{
+    margin-left: 0;
+    transition: all 0.4s ease;
+}
+
+section{
+    width: 100%;
+    min-height: 95vh;
+}
+
+.princial{
+    display: flex;
+    flex-direction: row;
+}
+
+.princial .box{
+    max-width: 100%;
+    padding: 10px;
+}
+
+.text{
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.text h1{
+    font-size: clamp(1.5rem, calc(2vw + 1.7rem), 2.8rem);
+    background-color: var(--color-terciario);
+    text-align: center;
+
+    max-width: 80%;
+    min-width: 400px;
+
+    margin: auto;
+    border-radius: 10px;
+    padding: min(2em, 2%);
+}
+
+.text p{
+    font-size: clamp(1rem ,calc(1vw + 1.5rem), 1.8rem);
+    background-color: var(--color-principal);
+
+    width: 85%;
+    margin: auto;
+    min-width: 400px;
+    margin-top: 50px;
+    border-radius: 10px;
+    padding: min(2em, 2%);
+}
+
+.text .redes{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 85%;
+    margin: auto;
+    justify-content: center;
+}
+
+.text .redes h2{
+    margin-bottom: 5px;
+}
+
+.text .redes a img{
+    margin-left: 5px;
+}
+
+.box{
+    width: 100%;
+    min-width: 50%;
+}
+
+.formu{
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.formu h1{
+    font-size: clamp(1.5rem, calc(2vw + 1.7rem), 2.8rem);
+    background-color: var(--color-terciario);
+    text-align: center;
+
+    max-width: 80%;
+    min-width: 400px;
+
+    margin: auto;
+    border-radius: 10px;
+    padding: min(2em, 2%);
+}
+
+form{
+    background-color: var(--color-terciario);
+    box-shadow: 0 1px 2px var(--color-quintenario);
+    display: flex;
+    flex-direction: column;
+
+    width: 85%;
+    margin: auto;
+
+    gap:10px;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+input, textarea, button{
+    background-color: var(--color-principal);
+    border: none;
+    border-radius: 5px;
+    color: var(--color-quintenario);
+    font-size: 18px;
+    outline: none;
+    padding: 15px;
+    width: 100%;
+}
+
+button{
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+
+.end{
+    width: 10%;
+    max-width: 150px;
+    text-align: center;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--color-principal);
+}
+
+@media screen and (max-width: 950px){
+    .princial{
+        display: flex;
+        flex-direction: column;
+    }
+
+}

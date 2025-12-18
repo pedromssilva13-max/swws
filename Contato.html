@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+      <title>Entre em contato</title>
+      <meta charset="utf-8">
+      <meta name="author" content="Pedro Miguel de Souza Silva">
+      <meta name="keywords" content="Mande seu contato pra mim, para feedbacks e criticas">
+      <link rel="stylesheet" href="../Arquivo_CSS/contato.css">
+    </head>
+    <body>
+      <header class="container">
+        <nav role="navigation" class="menu">
+          <input type="checkbox" id="menuCheckbox" >
+
+          <div id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+            <ul id="blockMenu">
+              <li>
+                <a href="../DesafioHTML/Home.html">
+                  <label for="menuCheckbox" onclick="this.parentNode.click();">Home</label>
+                </a>
+              </li>
+              <li>
+                <a href="../DesafioHTML/Hobbies.html">
+                  <label for="menuCheckbox" onclick="this.parentNode.click();">Hobbies</label>
+                </a>
+              </li>
+              <li>
+                <a href="../DesafioHTML/Galeria.html">
+                  <label for="menuCheckbox" onclick="this.parentNode.click();">Galeria</label>
+                </a>
+              </li>
+              <li>
+                <a href="../DesafioHTML/Contato.html">
+                  <label for="menuCheckbox" onclick="this.parentNode.click();">Contato</label>
+                </a>
+              </li>
+              <button id="Buttondack">
+                 <span class="Moon">SS</span>
+                 <span class="Sun"></span>
+              </button>
+            </ul>
+        </nav>
+      </header>
+      <main>
+        <section>
+          <div class="princial">
+            
+              <div class="box text">
+                
+                <h1>Entre em contato</h1>
+                <p>Fique a vontade para entrar em contato comigo. Estou sempre aberto para feedbacks a respeito ao site e como posso melhorar, e para combinarmos um <b>cafézinho online</b> a qualquer momento.</p>
+                <br>
+                <div class="redes">
+                  <h2>Siga-me</h2>                                                                                                                                                                                                                                                                                                                                                                                         
+                  <a href="#"><img width="50px" src="../Pasta_imagem/hobbies_galeria/instagram.png" alt="Siga-me no instagram"></a>
+                  <a href="#"><img width="50px" src="../Pasta_imagem/hobbies_galeria/github.png" alt="Siga-me no Github"></a>
+                  <a href="#"><img width="50px" src="../Pasta_imagem/hobbies_galeria/linkedin.png" alt="Siga-me no Linkedin"></a>
+                </div>
+
+              </div>      
+              <div class="box formu">
+                <h1>Formulário contato</h1>
+                <!--form action direciona para o local que vai ser redirecionado esse E-mail-->
+                <form action="mailto:pedromsouzasilva@gmail.com" method="post" enctype="text/plain">
+                  <!--O Nome da pessoa que vai enviar o e-mail, e que esse espaço é obrigadorio para se preenchido-->
+                  <input type="text" name="name" placeholder="Digite seu Nome"  id="nome" required>
+                  <input type="email" name="e-mail" placeholder="Digite seu e-mail" id="e-mail" required>
+                  <!--Caixa de comentario com largura e tamanho-->
+                  <textarea cols="30" rows="10" name="message" placeholder="Digite sua mensagem" id="mensagem" required></textarea>
+                  <button type="submit" id="Botao">ENVIAR</button>
+                  <!--Essa é a notificação do e-mail que vai ser enviado-->
+                  <input type="hidden" name="_subject" value="Novo Contato!">
+                  <!--Esse input serve para que o e-mail não entre na caixa de span-->
+                  <input type="text" name="_honey" style="display: none">
+                  <!--Esse hidden serve para apois enviar o e-mail as credenciais sejam apagadas-->
+                  <input type="hidden" name="_captcha" value="false">
+                </form>
+              </div>
+            </div>
+          </section>
+      </main>
+      <footer>
+        <div class="end">
+          <p>©CopyrightPedroM</p>
+        </div>
+      </footer>
+    </body>
+    <script src="../Arquivo_Javascript/contato.js"></script>
+</html>
